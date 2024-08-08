@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "/home/customw2/conexiones/config_reccius.php";
+require_once "/home/recciusc/conexiones/config_reccius.php";
 header('Content-Type: application/json');
 
 if (!isset($_SESSION['usuario']) || empty($_SESSION['usuario'])) {

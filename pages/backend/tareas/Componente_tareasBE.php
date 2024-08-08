@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "/home/customw2/conexiones/config_reccius.php";
+require_once "/home/recciusc/conexiones/config_reccius.php";
 
 // Verifica si el usuario está en la sesión
 if (!isset($_SESSION['usuario'])) {

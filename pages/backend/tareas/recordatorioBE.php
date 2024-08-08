@@ -1,5 +1,5 @@
 <?php
-require_once "/home/customw2/conexiones/config_reccius.php";
+require_once "/home/recciusc/conexiones/config_reccius.php";
 include "../email/envia_correoBE.php";
 
 // Asegúrate de incluir la configuración de la base de datos o cualquier otra librería necesaria

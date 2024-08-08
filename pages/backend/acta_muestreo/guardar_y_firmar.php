@@ -1,7 +1,7 @@
 <?php
 // archivo pages\backend\acta_muestreo\guardar_y_firmar.php
 session_start();
-require_once "/home/customw2/conexiones/config_reccius.php";
+require_once "/home/recciusc/conexiones/config_reccius.php";
 
 // Leer los datos JSON enviados desde el frontend
 $inputJSON = file_get_contents('php://input');

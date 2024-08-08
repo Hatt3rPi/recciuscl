@@ -335,7 +335,7 @@
         function generarMostrarQR(usuario, contenedorQR) {
             if (usuario && usuario.ruta_registro) {
                 // Construye la URL de la API de QR
-                var qrApiUrl = 'https://api.qrserver.com/v1/create-qr-code/?data=https://customware.cl/reccius/documentos_publicos/' + encodeURIComponent(usuario.ruta_registro) + '&amp;size=64x64';
+                var qrApiUrl = 'https://api.qrserver.com/v1/create-qr-code/?data=https://reccius.cl/customware/documentos_publicos/' + encodeURIComponent(usuario.ruta_registro) + '&amp;size=64x64';
 
                 // Crea o actualiza el elemento <img> con la URL del QR
                 var imgElement = document.getElementById(contenedorQR).querySelector('img');

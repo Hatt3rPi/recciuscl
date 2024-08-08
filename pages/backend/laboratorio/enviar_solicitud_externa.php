@@ -4,7 +4,7 @@ session_start();
 header('Content-Type: application/json');
 include "../email/envia_correoBE.php";
 require_once "../otros/laboratorio.php";
-require_once "/home/customw2/conexiones/config_reccius.php";
+require_once "/home/recciusc/conexiones/config_reccius.php";
 
 if (!isset($_SESSION['usuario']) || empty($_SESSION['usuario'])) {
     echo json_encode(['exito' => false, 'mensaje' => 'Acceso denegado']);
