@@ -1,7 +1,7 @@
 <?php
 // archivo: pages\backend\acta_muestreo\listado_acta_muestreoBE.php
 session_start();
-require_once "/home/customw2/conexiones/config_reccius.php";
+require_once "/home/recciusc/conexiones/config_reccius.php";
 
 
 // Consulta para obtener las especificaciones de productos

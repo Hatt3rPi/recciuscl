@@ -3,7 +3,7 @@
 //solución podría conllevar problemas del tipo de cambio de usuarios que firman
 session_start();
 header('Content-Type: application/json');
-require_once "/home/customw2/conexiones/config_reccius.php";
+require_once "/home/recciusc/conexiones/config_reccius.php";
 
 if (!isset($_SESSION['usuario']) || empty($_SESSION['usuario'])) {
   echo json_encode(['exito' => false, 'mensaje' => 'Acceso denegado']);

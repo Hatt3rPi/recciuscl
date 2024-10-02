@@ -1,5 +1,5 @@
 <?php
-require_once "/home/customw2/conexiones/config_reccius.php";
+require_once "/home/recciusc/conexiones/config_reccius.php";
 
 // Verificar la conexión con la base de datos
 if (!$link) {

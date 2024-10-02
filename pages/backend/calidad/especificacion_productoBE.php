@@ -1,7 +1,7 @@
 <?php
 // archivo: pages\backend\calidad\especificacion_productoBE.php
 session_start();
-require_once "/home/customw2/conexiones/config_reccius.php";
+require_once "/home/recciusc/conexiones/config_reccius.php";
 
 if (!isset($_SESSION['usuario']) || empty($_SESSION['usuario'])) {
     echo json_encode(["exito" => false, "mensaje" => "Sesión no iniciada. Por favor, inicie sesión para continuar.", "idEspecificacion" => 0]);

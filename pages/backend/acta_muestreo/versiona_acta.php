@@ -1,7 +1,7 @@
 <?php
 //archivo pages\backend\acta_muestreo\versiona_acta.php
 session_start();
-require_once "/home/customw2/conexiones/config_reccius.php";
+require_once "/home/recciusc/conexiones/config_reccius.php";
 $tipo_producto='';
 $identificador_producto='';
 $id_especificacion='';

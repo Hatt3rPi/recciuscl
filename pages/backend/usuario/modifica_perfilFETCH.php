@@ -1,8 +1,8 @@
 <?php
 //archivo pages\backend\usuario\modifica_perfilFETCH.php
 session_start();
-require_once "/home/customw2/conexiones/config_reccius.php";
-include '/home/customw2/librerias/phpqrcode/qrlib.php';
+require_once "/home/recciusc/conexiones/config_reccius.php";
+include '/home/recciusc/librerias/phpqrcode/qrlib.php';
 include_once '../cloud/R2_manager.php';
 
 $method = $_SERVER['REQUEST_METHOD'];

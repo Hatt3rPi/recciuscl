@@ -1,7 +1,7 @@
 <?php
 //archivo: pages\backend\calidad\firma_documentoBE.php
 session_start();
-require_once "/home/customw2/conexiones/config_reccius.php";
+require_once "/home/recciusc/conexiones/config_reccius.php";
 
 // Verificación básica para asegurarse de que el usuario está autenticado y los datos necesarios están presentes
 if (!isset($_SESSION['usuario']) || empty($_SESSION['usuario']) || !isset($_POST['idEspecificacion']) || !isset($_POST['rolUsuario'])) {

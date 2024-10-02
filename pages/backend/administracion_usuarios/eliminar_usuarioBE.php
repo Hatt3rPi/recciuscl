@@ -1,5 +1,5 @@
 <?php
-require_once "/home/customw2/conexiones/config_reccius.php";
+require_once "/home/recciusc/conexiones/config_reccius.php";
 
 // Verificar si es una solicitud POST
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

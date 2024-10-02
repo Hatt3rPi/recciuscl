@@ -5,9 +5,9 @@ use PHPMailer\PHPMailer\Exception;
 
 // Verificar si las librerías PHPMailer existen
 $paths = [
-    '/home/customw2/librerias/PHPMailer-6.9.1/src/Exception.php',
-    '/home/customw2/librerias/PHPMailer-6.9.1/src/PHPMailer.php',
-    '/home/customw2/librerias/PHPMailer-6.9.1/src/SMTP.php'
+    '/home/recciusc/librerias/PHPMailer-6.9.1/src/Exception.php',
+    '/home/recciusc/librerias/PHPMailer-6.9.1/src/PHPMailer.php',
+    '/home/recciusc/librerias/PHPMailer-6.9.1/src/SMTP.php'
 ];
 
 foreach ($paths as $path) {
@@ -16,7 +16,7 @@ foreach ($paths as $path) {
     }
 }
 
-require '/home/customw2/conexiones/config_correo_noreply.php';
+require '/home/recciusc/conexiones/config_correo_noreply.php';
 require_once $paths[0];
 require_once $paths[1];
 require_once $paths[2];

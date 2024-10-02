@@ -1,7 +1,7 @@
 <?php
 // archivo: pages\backend\calidad\eliminar_especificacion_producto.php
 session_start();
-require_once "/home/customw2/conexiones/config_reccius.php";
+require_once "/home/recciusc/conexiones/config_reccius.php";
 
 // Comprobar si el ID fue enviado por POST
 if (!isset($_POST['id_especificacionProducto'])) {
