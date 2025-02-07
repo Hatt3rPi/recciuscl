@@ -7,7 +7,7 @@ $nombreArchivo = $_GET['archivo'];
 $nombreArchivo = basename($nombreArchivo);
 
 // Definir la ruta al directorio donde se almacenan los documentos
-$rutaDocumentos = '/home/customw2/documentos/';
+$rutaDocumentos = '/home/recciusc/documentos/';
 
 // Construir la ruta completa al archivo
 $rutaCompleta = $rutaDocumentos . $nombreArchivo;
