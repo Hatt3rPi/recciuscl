@@ -116,7 +116,7 @@ if (!isset($_SESSION['foto_firma']) || empty($_SESSION['foto_firma'])) {
                 <button id="toggle-sidebar-btn" class="buttonreset togglesibar"><img
                         src="../assets/images/menuburger.svg" alt="ocultar sidebar" width="24" height="24"></button>
                 <img src="../assets/images/logo_reccius_medicina_especializada-1.png" id="logo" name="logo" alt="Logo"
-                    href="https://customware.cl/reccius/pages/index.php" data-breadcrumb="Home > Data > Trazabilidad"
+                    href="https://reccius.cl/customware/pages/index.php" data-breadcrumb="Home > Data > Trazabilidad"
                     class="logo" />
             </div>
             <div id="notificaciones" name="notificaciones" class="notifications"

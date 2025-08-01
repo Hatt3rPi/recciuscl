@@ -2,13 +2,13 @@
 // archivo: pages\backend\laboratorio\enviar_solicitud_externa.php
 session_start();
 if (!isset($_SESSION['usuario']) || empty($_SESSION['usuario'])) {
-    header("Location: https://customware.cl/reccius/pages/login.html");
+    header("Location: https://reccius.cl/customware/pages/login.html");
     exit;
 }
 header('Content-Type: application/json');
 include "../email/envia_correoBE.php";
 require_once "../otros/laboratorio.php";
-require_once "/home/customw2/conexiones/config_reccius.php";
+require_once "/home/recciusc/conexiones/config_reccius.php";
 
 $host = $_SERVER['HTTP_HOST'];
 
