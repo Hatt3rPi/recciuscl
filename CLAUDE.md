@@ -25,7 +25,7 @@ Sistema de gestión integral para Reccius Medicina Especializada que incluye mó
 ### Base de datos
 ```bash
 # Conexión a base de datos está en:
-/home/customw2/conexiones/config_reccius.php
+/home/recciusc/conexiones/config_reccius.php
 ```
 
 ### Servidor de desarrollo
@@ -98,7 +98,7 @@ php -S localhost:8000 -t .
 
 1. **Archivos Backend (BE)**
    - Nomenclatura: `nombreFuncionalidadBE.php`
-   - Incluyen conexión a BD: `require_once "/home/customw2/conexiones/config_reccius.php"`
+   - Incluyen conexión a BD: `require_once "/home/recciusc/conexiones/config_reccius.php"`
    - Uso de `mysqli_real_escape_string` para prevenir SQL injection
    - Respuestas JSON para AJAX
 
