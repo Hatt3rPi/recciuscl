@@ -2,7 +2,7 @@
 // Script para revisar logs de subida de PDF
 // Archivo: check_pdf_upload_logs.php
 
-require_once "/home/customw2/conexiones/config_reccius.php";
+require_once "/home/recciusc/conexiones/config_reccius.php";
 
 ?>
 <style>
