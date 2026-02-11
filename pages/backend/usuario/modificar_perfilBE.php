@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once "/home/customw2/conexiones/config_reccius.php";
-include '/home/customw2/librerias/phpqrcode/qrlib.php'; // Asegúrate de ajustar la ruta según donde coloques la biblioteca
+require_once "/home/recciusc/conexiones/config_reccius.php";
+include '/home/recciusc/librerias/phpqrcode/qrlib.php'; // Asegúrate de ajustar la ruta según donde coloques la biblioteca
 
 function cambiarFirma($link, $usuario, $firma) {
     // Verifica y procesa la firma similar a cómo lo haces con cambiarFotoPerfil
@@ -31,7 +31,7 @@ function cambiarFirma($link, $usuario, $firma) {
 }
 
 function generarQR($usuario, $rutaRegistro){
-    $contenidoQR = 'https://customware.cl/reccius/documentos_publicos/' . $rutaRegistro;
+    $contenidoQR = 'https://reccius.cl/customware/documentos_publicos/' . $rutaRegistro;
     $nombreArchivoQR = '../../../documentos_publicos/qr_documento_' . $usuario . '.png'; // Ajusta la ruta según sea necesario
     QRcode::png($contenidoQR, $nombreArchivoQR, QR_ECLEVEL_L, 3, 2);
     return 'qr_documento_' . $usuario . '.png'; // Devuelve la ruta del archivo QR para su uso posterior si es necesario

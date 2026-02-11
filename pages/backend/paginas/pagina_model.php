@@ -2,7 +2,7 @@
 // archivo: pages/backend/paginas/PaginaModel.php
 
 if (!isset($_SESSION['usuario']) || empty($_SESSION['usuario'])) {
-    header("Location: https://customware.cl/reccius/pages/login.html");
+    header("Location: https://reccius.cl/customware/pages/login.html");
     exit;
 }
 

@@ -2,7 +2,7 @@
 // archivo: pages\CALIDAD_acta_muestreo.php
 // analizar eliminación
 session_start();
-require_once "/home/customw2/conexiones/config_reccius.php";
+require_once "/home/recciusc/conexiones/config_reccius.php";
 // Verificar si la variable de sesión "usuario" no está establecida o está vacía.
 if (!isset($_SESSION['usuario']) || empty($_SESSION['usuario'])) {
     // Redirigir al usuario a la página de inicio de sesión.

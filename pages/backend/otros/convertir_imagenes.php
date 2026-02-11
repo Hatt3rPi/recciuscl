@@ -2,7 +2,7 @@
 // Este archivo se llamará 'convertir_imagenes.php'
 session_start();
 if (!isset($_SESSION['usuario']) || empty($_SESSION['usuario'])) {
-    header("Location: https://customware.cl/reccius/pages/login.html");
+    header("Location: https://reccius.cl/customware/pages/login.html");
     exit;
 }
 function convertToBase64($url) {

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "/home/customw2/conexiones/config_reccius.php";
+require_once "/home/recciusc/conexiones/config_reccius.php";
 include "../email/envia_correoBE.php"; // Asegúrate de que esta ruta es correcta
 
 function limpiarDato($dato) {
@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 mysqli_stmt_execute($insertToken);
                 mysqli_stmt_close($insertToken);
 
-                $enlaceReset = 'https://customware.cl/reccius/reset_password.php?token=' . $token;
+                $enlaceReset = 'https://reccius.cl/customware/reset_password.php?token=' . $token;
                 $asunto = 'Restablecer tu contraseña';
                 $cuerpo = 'Por favor, haz clic en este enlace para restablecer tu contraseña: ' . $enlaceReset;
 

@@ -1,9 +1,9 @@
 <?php
 // archivo: pages\backend\acta_liberacion\carga_acta_liberacion.php
 session_start();
-require_once "/home/customw2/conexiones/config_reccius.php";
+require_once "/home/recciusc/conexiones/config_reccius.php";
 if (!isset($_SESSION['usuario']) || empty($_SESSION['usuario'])) {
-    header("Location: https://customware.cl/reccius/pages/login.html");
+    header("Location: https://reccius.cl/customware/pages/login.html");
     exit;
 }
 $response = [

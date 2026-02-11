@@ -2,10 +2,10 @@
 //archivo: pages\backend\laboratorio\enviar_solicitud_carga.php
 session_start();
 if (!isset($_SESSION['usuario']) || empty($_SESSION['usuario'])) {
-    header("Location: https://customware.cl/reccius/pages/login.html");
+    header("Location: https://reccius.cl/customware/pages/login.html");
     exit;
 }
-require_once "/home/customw2/conexiones/config_reccius.php";
+require_once "/home/recciusc/conexiones/config_reccius.php";
 require_once "../otros/laboratorio.php";
 
 // Validación y saneamiento del ID del análisis externo

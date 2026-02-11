@@ -1,15 +1,15 @@
 <?php
 // pages\backend\cloud\R2_manager.php
 session_start();
-require_once "/home/customw2/conexiones/config_reccius.php";
-require_once "/home/customw2/librerias/aws/aws-autoloader.php";
+require_once "/home/recciusc/conexiones/config_reccius.php";
+require_once "/home/recciusc/librerias/aws/aws-autoloader.php";
 //require_once "../../../assets/dependencies/aws/aws-autoloader.php";
 
 use  Aws\Credentials\Credentials;
 use Aws\S3\S3Client;
 
 if (!isset($_SESSION['usuario']) || empty($_SESSION['usuario'])) {
-  header("Location: https://customware.cl/reccius/pages/login.html");
+  header("Location: https://reccius.cl/customware/pages/login.html");
   exit;
 }
 

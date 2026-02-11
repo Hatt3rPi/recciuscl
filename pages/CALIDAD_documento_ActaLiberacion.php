@@ -6,7 +6,7 @@ if (!isset($_SESSION['usuario']) || empty($_SESSION['usuario'])) {
     header("Location: login.html");
     exit;
 }
-require_once "/home/customw2/conexiones/config_reccius.php";
+require_once "/home/recciusc/conexiones/config_reccius.php";
 
 $id = isset($_POST['id']) ? $_POST['id'] : null;
 $modo_edicion = isset($_POST['liberado']) && $_POST['liberado'] === "true";

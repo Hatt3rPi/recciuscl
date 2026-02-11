@@ -2,14 +2,14 @@
 // Incluir las dependencias necesarias
 session_start();
 if (!isset($_SESSION['usuario']) || empty($_SESSION['usuario'])) {
-    header("Location: https://customware.cl/reccius/pages/login.html");
+    header("Location: https://reccius.cl/customware/pages/login.html");
     exit;
 }
-require '/home/customw2/librerias/PHPMailer-6.9.1/src/Exception.php';
-require '/home/customw2/librerias/PHPMailer-6.9.1/src/PHPMailer.php';
-require '/home/customw2/librerias/PHPMailer-6.9.1/src/SMTP.php';
-require '/home/customw2/conexiones/config_correo_noreply.php';
-require "/home/customw2/conexiones/config_reccius.php";
+require '/home/recciusc/librerias/PHPMailer-6.9.1/src/Exception.php';
+require '/home/recciusc/librerias/PHPMailer-6.9.1/src/PHPMailer.php';
+require '/home/recciusc/librerias/PHPMailer-6.9.1/src/SMTP.php';
+require '/home/recciusc/conexiones/config_correo_noreply.php';
+require "/home/recciusc/conexiones/config_reccius.php";
 require './envia_correoBE.php'; // Asegúrate de que este archivo contiene la función enviarCorreo_transitorio
 
 use PHPMailer\PHPMailer\PHPMailer;
