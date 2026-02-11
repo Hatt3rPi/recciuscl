@@ -8,6 +8,7 @@ if (!isset($_SESSION['usuario']) || empty($_SESSION['usuario'])) {
 }
 require_once "/home/customw2/conexiones/config_reccius.php";
 require_once "../otros/laboratorio.php";
+require_once "../otros/validaciones.php";
 require_once "../cloud/R2_manager.php";
 header('Content-Type: application/json');
 $mensaje='GO ';
@@ -590,10 +591,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             agregarDatosPostFirma($link, $datosLimpios,$archivo);
         } else {
+            // Validar que el lote no esté asociado a un producto diferente
+            $validacionLote = validarLoteProducto($link, $lote, $id_especificacion);
+            if (!$validacionLote['valid']) {
+                throw new Exception($validacionLote['mensaje']);
+            }
+
             error_log("Iniciando inserción de nuevo registro con id_producto: " . $id_producto);
             insertarRegistro($link, $datosLimpios);
+            // Obtener id_producto autoritativo del registro recién creado en vez de confiar en $_POST
+            $stmt_prod = mysqli_prepare($link, "SELECT id_producto FROM calidad_analisis_externo WHERE id = ?");
+            mysqli_stmt_bind_param($stmt_prod, 'i', $id_analisis_externo);
+            mysqli_stmt_execute($stmt_prod);
+            $result_prod = mysqli_stmt_get_result($stmt_prod);
+            $row_prod = mysqli_fetch_assoc($result_prod);
+            $id_producto_seguro = $row_prod['id_producto'];
+            mysqli_stmt_close($stmt_prod);
+
             registrarTarea(7, $_SESSION['usuario'], $am_ejecutado_por, 'Generar Acta Muestreo para análisis externo:' . $numero_solicitud , 2, 'Generar Acta Muestreo', $id_analisis_externo, 'calidad_analisis_externo');
-            enviar_aCuarentena($link, $id_especificacion, $id_producto, $id_analisis_externo, $lote, $tamano_lote, $fechaActual, $fecha_elaboracion, $fecha_vencimiento);
+            enviar_aCuarentena($link, $id_especificacion, $id_producto_seguro, $id_analisis_externo, $lote, $tamano_lote, $fechaActual, $fecha_elaboracion, $fecha_vencimiento);
         }
         mysqli_commit($link); // Aplicar cambios
         echo json_encode(["exito" => true, "mensaje" => $mensaje]);

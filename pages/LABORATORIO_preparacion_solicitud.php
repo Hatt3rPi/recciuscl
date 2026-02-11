@@ -724,7 +724,7 @@ while ($row = mysqli_fetch_assoc($result)) {
             //* II. Especificaciones
             var arrToSetEspecificaciones = [{
                 id: 'id_producto',
-                val: analisis.prod_identificador_producto,
+                val: analisis.id_producto,
                 isDisabled: false
             },
             {
@@ -1005,6 +1005,29 @@ while ($row = mysqli_fetch_assoc($result)) {
             $('textarea').addClass('editable');
             $('select').addClass('editable');
 
+        });
+
+        // Validación de lote duplicado al salir del campo
+        $('#lote').on('blur', function() {
+            var lote = $(this).val().trim();
+            var id_especificacion = $('#id_especificacion').val();
+            if (!lote || !id_especificacion) return;
+
+            $.ajax({
+                url: './backend/laboratorio/validar_lote.php',
+                type: 'GET',
+                data: { lote: lote, id_especificacion: id_especificacion },
+                dataType: 'json',
+                success: function(response) {
+                    if (!response.valid) {
+                        $('#alert_warning').text(response.mensaje).show();
+                        $('#guardar').prop('disabled', true);
+                    } else {
+                        $('#alert_warning').hide();
+                        $('#guardar').prop('disabled', false);
+                    }
+                }
+            });
         });
 
         $('#formulario_analisis_externo').on('submit', formSubmit);
